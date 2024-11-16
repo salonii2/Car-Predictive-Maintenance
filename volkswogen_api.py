@@ -22,7 +22,7 @@ if not hasattr(model, "predict"):
     raise ValueError("The model is not fitted!")
 
 # Initialize Flask app
-app = Flask(_name_)
+app = Flask(name)
 
 
 # # Simulate real-time data stream (replace with actual stream source)
@@ -164,5 +164,5 @@ def predict_rul():
 
 
 # Run the Flask app
-if _name_ == "_main_":
+if name == "main":
     app.run(debug=True, host="127.0.0.1", port=5000)
