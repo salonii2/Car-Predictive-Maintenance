@@ -48,14 +48,6 @@ app = Flask(__name__)
 #         "environmental_condition": environmental_condition
 #     }
 
-# Preprocess incoming real-time data
-def hello_rout():
-    return "response"
-
-@app.route('/', methods=['GET', 'POST'])
-def response():
-    return hello_rout()
-
 
 def preprocess_data(data):
     # Convert the categorical features to numerical values
