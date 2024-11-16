@@ -50,10 +50,10 @@ app = Flask(__name__)
 
 # Preprocess incoming real-time data
 def hello_rout():
-    return "Hello, World!"
+    return "response"
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def response():
     return hello_rout()
 
 
