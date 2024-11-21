@@ -5,7 +5,7 @@ import pickle
 from datetime import datetime
 
 # Load the trained model
-with open("trained_model.pkl", "rb") as f:
+with open("trained_model2.pkl", "rb") as f:
     print("File Opened")
     model = pickle.load(f)
 
