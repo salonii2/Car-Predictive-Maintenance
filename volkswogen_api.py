@@ -6,6 +6,7 @@ from datetime import datetime
 
 # Load the trained model
 with open("trained_model.pkl", "rb") as f:
+    print("File Opened")
     model = pickle.load(f)
 
 # Check if the model is properly fitted
@@ -112,6 +113,7 @@ def get_real_time_data(data):
 
 @app.route('/api/predict', methods=['GET'])
 def predict_rul():
+    print("Inside API call")
     data = {
     "engine_temp": float(np.random.normal(75, 2)),  # Convert to standard Python float
     "brake_thickness":float(max(0, np.random.normal(12.0, 0.1))),
@@ -122,11 +124,14 @@ def predict_rul():
     "driving_behavior":int(np.random.choice([0, 1, 2], p=[0.7, 0.2, 0.1])),  # Convert to standard Python int
     "environmental_condition": int(np.random.choice([0, 1], p=[0.8, 0.2]))
     }
+    print("Received Dummy Data ")
     # Get real-time data
     new_data = get_real_time_data(data)
+    print("Received simulated data")
 
     # Preprocess the incoming data
     new_data_df = preprocess_data(new_data)
+    print("pre-processed the data")
 
     # Make predictions using the model
     predictions = model.predict(new_data_df)
