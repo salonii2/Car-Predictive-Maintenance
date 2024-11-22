@@ -32,11 +32,11 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system.
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Salonii2/car-predictive-maintenance.git
 
 2. Navigate into the project directory:
    ```bash
-   cd <project-directory>
+   cd car-predictive-maintenance
 
 4. Install the project dependencies:
    ```bash
