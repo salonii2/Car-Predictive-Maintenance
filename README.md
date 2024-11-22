@@ -1,6 +1,6 @@
 ## Requirements
 
-- Python 3.10.12
+- Python 3.11
 - Node.js 16+ (Includes npm)
 
 ## Setup Instructions
