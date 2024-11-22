@@ -28,18 +28,24 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system.
    git clone <repository-url>
 
 2. Navigate into the project directory:
+   ```bash
    cd <project-directory>
 
-3. Install the project dependencies:
+4. Install the project dependencies:
+   ```bash
    npm install
 
-4. Install Vite as a development dependency:
+6. Install Vite as a development dependency:
+   ```bash
    npm install vite --save-dev
 
-5. Run the development server:
+8. Run the development server:
+   ```bash
    npm run dev
 
-6. This will start the Vite development server and you can access your application at http://localhost:3000.
+10. This will start the Vite development server and you can access your application at
+    ```bash
+    http://localhost:3000.
 
 
 
