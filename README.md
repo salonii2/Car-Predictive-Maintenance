@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
     - To verify if Git is installed, run: `git --version`
     - If Git is not installed, download it from [git-scm.com](https://git-scm.com/).
     - 
-Ensure you have [Node.js]([https://nodejs.org/](https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi)) installed on your system.
+Ensure you have [Node.js](https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi) installed on your system.
 
 
 ## Setup Instructions
