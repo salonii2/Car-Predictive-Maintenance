@@ -14,13 +14,13 @@ To get started with this project, you need to install the necessary dependencies
 
 Before you begin, ensure you have met the following requirements:
 
-- **Git**: Make sure Git is installed on your machine.
+1.**Git**: Make sure Git is installed on your machine.
     - To verify if Git is installed, run: `git --version`
     - If Git is not installed, download it from [git-scm.com](https://git-scm.com/).
   
 Ensure you have [Node.js](https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi) installed on your system.
 
-### How to Install Python 3.11
+ 2.**How to Install Python 3.11**
 Follow the steps below to install Python 3.11 on your system.
 
 Install Python 3.11 (Windows):
