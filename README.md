@@ -64,4 +64,4 @@ Follow the steps below to install **Python 3.11**:
 
 6. Access the application: Open your browser and navigate to:
    ```bash
-   [npm run dev](http://localhost:3000)
+   (http://localhost:5173)
