@@ -21,7 +21,7 @@ Before you begin, ensure the following requirements are met:
     ```bash
     git --version
     ```
-  - If Git is not installed, download it from [git-scm.com](https://git-scm.com/).
+  - If Git is not installed, download it from [[git-scm.com](https://git-scm.com/)](https://git-scm.com/downloads).
 
 - **Node.js**:
   - Ensure you have Node.js installed. You can download the latest version from the [official Node.js website](https://nodejs.org/).
