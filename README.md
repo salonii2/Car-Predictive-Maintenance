@@ -2,37 +2,47 @@
 
 ## Requirements
 
-- Git
-- Python 3.11
-- Node.js (Includes npm)
+- **Git**
+- **Python 3.11**
+- **Node.js** (Includes npm)
+
+---
 
 ## Setup Instructions
 
-To get started with this project, you need to install the necessary dependencies.
+To get started with this project, ensure you have all the necessary dependencies installed.
 
-## Prerequisites
+### Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before you begin, ensure the following requirements are met:
 
-**Git**: Make sure Git is installed on your machine.
-    - To verify if Git is installed, run: `git --version`
-    - If Git is not installed, download it from [git-scm.com](https://git-scm.com/).
-  
-Ensure you have [Node.js](https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi) installed on your system.
+- **Git**:
+  - Verify if Git is installed by running:
+    ```bash
+    git --version
+    ```
+  - If Git is not installed, download it from [git-scm.com](https://git-scm.com/).
+
+- **Node.js**:
+  - Ensure you have Node.js installed. You can download the latest version from the [official Node.js website](https://nodejs.org/).
+
+---
 
 ## How to Install Python 3.11
-Follow the steps below to install Python 3.11 on your system.
 
-Install Python 3.11 (Windows):
-Step 1: Go to the official Python Downloads page.
-Step 2: Download the Python 3.11 installer for Windows.
-Step 3: Run the installer.
-During the installation, ensure you check the box that says "Add Python 3.11 to PATH" before clicking Install Now.
+Follow the steps below to install **Python 3.11**:
 
+### For Windows:
+1. Go to the official [Python Downloads page](https://www.python.org/downloads/release/python-3110/).
+2. Download the Python 3.11 installer for Windows.
+3. Run the installer:
+   - During installation, ensure you check the box labeled **"Add Python 3.11 to PATH"** before clicking **Install Now**.
+
+---
 
 ### Installation Steps
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/Salonii2/car-predictive-maintenance.git
 
@@ -40,11 +50,11 @@ During the installation, ensure you check the box that says "Add Python 3.11 to 
    ```bash
    cd car-predictive-maintenance
 
-3.Install Python dependencies:
+3. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
 
-4. Install the project dependencies:
+4. Install project dependencies:
    ```bash
    npm install
 
@@ -52,9 +62,6 @@ During the installation, ensure you check the box that says "Add Python 3.11 to 
    ```bash
    npm run dev
 
-6. This will start the Vite development server and you can access your application at
-    ```bash
-    http://localhost:3000.
-
-
-
+6. Access the application: Open your browser and navigate to:
+   ```bash
+   [npm run dev](http://localhost:3000)
