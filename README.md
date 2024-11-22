@@ -38,19 +38,15 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system.
    ```bash
    cd car-predictive-maintenance
 
-4. Install the project dependencies:
+3. Install the project dependencies:
    ```bash
    npm install
 
-6. Install Vite as a development dependency:
-   ```bash
-   npm install vite --save-dev
-
-8. Run the development server:
+4. Run the development server:
    ```bash
    npm run dev
 
-10. This will start the Vite development server and you can access your application at
+5. This will start the Vite development server and you can access your application at
     ```bash
     http://localhost:3000.
 
