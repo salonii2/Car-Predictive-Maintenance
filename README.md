@@ -24,9 +24,9 @@ Ensure you have [Node.js](https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi
 Follow the steps below to install Python 3.11 on your system.
 
 Install Python 3.11 (Windows):
-Step 1: Go to the official Python Downloads page.
-Step 2: Download the Python 3.11 installer for Windows.
-Step 3: Run the installer.
+ -Step 1: Go to the official Python Downloads page.
+ -Step 2: Download the Python 3.11 installer for Windows.
+ -Step 3: Run the installer.
 During the installation, ensure you check the box that says "Add Python 3.11 to PATH" before clicking Install Now.
 
 
