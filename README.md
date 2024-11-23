@@ -54,7 +54,11 @@ Follow the steps below to install **Python 3.11**:
    ```bash
    pip install -r requirements.txt
 
-4. Install project dependencies:
+4. Start the Flask API:
+   ```bash
+   python volkswagen_api.py
+
+5. Install project dependencies:
    ```bash
    npm install
 
