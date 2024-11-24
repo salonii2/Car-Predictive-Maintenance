@@ -55,7 +55,7 @@ To verify if Python 3.11 has been installed correctly on your system, follow the
 
 ### Installation Steps
 
-1. **Open Command Promt**
+1. **Open Command Promt (press Win + R, type cmd, and press Enter)**
 
 2. **Clone the repository**:
    ```bash
