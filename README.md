@@ -78,7 +78,5 @@ Follow the steps below to install **Python 3.11**:
    (http://localhost:5173)
 
 10. Keep Track of your Vehicle Health, Maintainence and Failure Predictions with our **AI-ML Powered Car Predictive Maintainence System**
-
-
-
-    **Thank you**
+    ```bash
+    Thank you
