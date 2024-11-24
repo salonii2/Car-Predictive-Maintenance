@@ -1,36 +1,44 @@
-// API Response interfaces
-export interface ApiResponse {
-  input_data: {
-    engine_temperature: number;
-    tire_pressure: number;
-    battery_voltage: number;
-    brake_pad: number;
-    oil_quality: number;
-  };
+// Represents the structure of individual sensor readings
+export type SensorData = {
+  engine_temperature: number;
+  brake_pad_thickness: number;
+  battery_voltage: number;
+  tire_pressure: number;
+  oil_quality: number;
+  cumulative_mileage: number;
+  driving_behavior: number;
+  environmental_condition: number;
+};
+
+// Wrapper type to match the expected backend payload structure
+export type SensorDataWrapper = {
+  sensor_data: SensorData;
+};
+
+// Represents the raw API response format from the backend
+export type RawApiResponse = {
+  timestamp: string;
   predictions: {
     RUL_battery: string;
     RUL_brake_pad: string;
     RUL_oil: string;
     RUL_tire: string;
   };
-}
+  input_data: SensorData;
+};
 
-export interface RawApiResponse {
-  sensor_data: {
-    engine_temperature: number;
-    oil_pressure: number;
-    coolant_level: number;
-    brake_pad_wear: number;
-    tire_pressure: number;
-  };
+// Processed API response structure used in the frontend
+export type ApiResponse = {
+  timestamp: string;
   predictions: {
-    battery_health: number;
-    battery_rul: string;
-    brake_rul: string;
-    oil_rul: string;
-    tire_rul: string;
+    RUL_battery: string;
+    RUL_brake_pad: string;
+    RUL_oil: string;
+    RUL_tire: string;
   };
-}
+  input_data: SensorData;
+};
+
 
 export interface Metric {
   id: number;
