@@ -19,9 +19,9 @@ export default function Dashboard() {
       const newMetrics: Metric[] = [
         {
           id: 1,
-          label: 'BRAKEPAD',
-          value: data.input_data.brake_pad,
-          status: getStatus(data.input_data.brake_pad),
+          label: 'Brake Pad Thickness',
+          value: data.input_data.brake_pad_thickness,
+          status: getStatus(data.input_data.brake_pad_thickness),
           icon: <Disc className="w-6 h-6 text-red-500" />,
           details: 'Break pad monitoring',
         },
@@ -35,20 +35,24 @@ export default function Dashboard() {
         },
         {
           id: 3,
-          label: 'BATTERY',
+          label: 'BATTERY VOLTAGE',
           value: data.input_data.battery_voltage,
           status: getStatus(data.input_data.battery_voltage),
           icon: '⚡',
           details: 'Battery health monitoring',
         },
+        
         {
           id: 4,
-          label: 'ENGINE OIL',
-          value: data.input_data.oil_quality,
-          status: getStatus(data.input_data.oil_quality),
-          icon: '💧',
-          details: 'Engine Oil quality monitoring',
+          label: 'Engine Temperature',
+          value: data.input_data.engine_temperature,
+          status: getStatus(data.input_data.engine_temperature),
+          icon: '🔥',
+          details: 'Engine temperature monitoring',
         },
+        
+      
+
       ];
 
       setMetrics(newMetrics);
@@ -59,26 +63,26 @@ export default function Dashboard() {
       const newAlerts: Alert[] = [
         {
           id: 1,
-          message: 'Battery Replacement',
-          details: `Battery replacement suggested in ${data.predictions.RUL_battery}.`,
+          message: 'Battery Replacement Needed Soon',
+          details: `Estimated Remaining Useful Life: ${data.predictions.RUL_battery}`,
           severity: 'medium',
         },
         {
           id: 2,
-          message: 'Brake Pad Service',
-          details: `Brake pads require service in ${data.predictions.RUL_brake_pad}.`,
+          message: 'Brake Pad Service Required',
+          details: `Estimated Remaining Useful Life: ${data.predictions.RUL_brake_pad}`,
           severity: 'medium',
         },
         {
           id: 3,
           message: 'Oil Change Due',
-          details: `Oil change required in ${data.predictions.RUL_oil}.`,
+          details: `Oil change required in ${data.predictions.RUL_oil}`,
           severity: 'high',
         },
         {
           id: 4,
-          message: 'Tire Maintenance',
-          details: `Tires need maintenance in ${data.predictions.RUL_tire}.`,
+          message: 'Tire Maintenance Required',
+          details: `Tires need maintenance in ${data.predictions.RUL_tire}`,
           severity: 'low',
         },
       ];
@@ -168,7 +172,7 @@ export default function Dashboard() {
                   value={parseFloat(metric.value.toFixed(2))}
                   label={metric.label}
                   status={metric.status}
-                  icon={metric.icon}
+                  icon={metric.status}
                 />
               ))}
             </div>
