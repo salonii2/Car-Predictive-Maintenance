@@ -42,30 +42,36 @@ Follow the steps below to install **Python 3.11**:
 
 ### Installation Steps
 
-1. **Clone the repository**:
+1. **Open Command Promt**
+
+2. **Clone the repository**:
    ```bash
    git clone https://github.com/Salonii2/car-predictive-maintenance.git
 
-2. Navigate into the project directory:
+3. **Navigate into the project directory**:
    ```bash
    cd car-predictive-maintenance
 
-3. Install Python dependencies:
+4. **Install Python dependencies**:
    ```bash
    pip install -r requirements.txt
 
-4. Start the Flask API:
+5. **Start the Flask API**:
    ```bash
    python volkswogen_api.py
 
-5. Install project dependencies:
+6. **If API Start Running on 'http://127.0.0.1:5000'** then open new Command Prompt Terminal and Naviagate into the project directory again:
+   ```bash
+   cd car-predictive-maintenance
+
+7. **Install project dependencies**:
    ```bash
    npm install
 
-5. Run the development server:
+5. **Run the development server**:
    ```bash
    npm run dev
 
-6. Access the application: Open your browser and navigate to:
+6. **Access the application**: Open your browser and navigate to:
    ```bash
    (http://localhost:5173)
