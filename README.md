@@ -38,7 +38,7 @@ Follow the steps below to install **Python 3.11**:
 3. Run the installer:
    - During installation, ensure you check the box labeled **"Add Python 3.11 to PATH"** before clicking **Install Now**.
   
-## How to Check Python Version:
+### How to Check Python Version:
 
 To verify if Python 3.11 has been installed correctly on your system, follow these steps:
 
