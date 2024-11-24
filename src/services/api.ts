@@ -1,74 +1,80 @@
-import { ApiResponse, RawApiResponse, SensorData } from '../types/api';
+import { ApiResponse, RawApiResponse, SensorData, SensorDataWrapper } from '../types/api';
 
 const API_URL = 'http://127.0.0.1:5000/api/predict';
 const MAX_RETRIES = 3;
-const RETRY_DELAY = 2000;
+const RETRY_DELAY = 200;
 
+// Function to generate simulated sensor data
 const generateSensorData = (): SensorData => ({
   engine_temperature: Math.random() * (95 - 75) + 75,
-  oil_pressure: Math.random() * (55 - 35) + 35,
-  coolant_level: Math.random() * (90 - 70) + 70,
-  brake_pad_wear: Math.random() * (85 - 65) + 65,
-  tire_pressure: Math.random() * (35 - 29) + 29
+  brake_pad_thickness: Math.max(0, Math.random() * (12.1 - 11.9) + 11.9), // Ensuring the value is never less than 0
+  battery_voltage: Math.random() * (12.65 - 12.55) + 12.55,
+  tire_pressure: Math.random() * (33 - 31) + 31,
+  oil_quality: Math.max(0, Math.random() * (100.5 - 99.5) + 99.5), // Ensuring the value is never less than 0
+  cumulative_mileage: Math.random() * (5050 - 4950) + 4950,
+  driving_behavior: Math.floor(Math.random() * 3), // Random choice between 0, 1, 2
+  environmental_condition: Math.floor(Math.random() * 2), // Random choice between 0 and 1
 });
 
+// Function to call the backend API and fetch predictions
 export const fetchVehicleData = async (retryCount = 0): Promise<ApiResponse> => {
   try {
-    const sensorData = generateSensorData();
+    const sensorData: SensorDataWrapper = { sensor_data: generateSensorData() }; // Wrap the sensor data as per the backend format
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ sensor_data: sensorData })
+      body: JSON.stringify(sensorData),
     });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data: RawApiResponse = await response.json();
-    return transformApiResponse(data);
+    const rawData: RawApiResponse = await response.json(); // Expect the raw API response format
+    return transformApiResponse(rawData); // Transform the response for frontend usage
   } catch (error) {
     if (retryCount < MAX_RETRIES - 1) {
       console.warn(`API attempt ${retryCount + 1} failed, retrying...`);
-      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-      return fetchVehicleData(retryCount + 1);
+      await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY));
+      return fetchVehicleData(retryCount + 1); // Retry the API call
     }
-    
+
     console.warn('Using fallback data after all retries failed');
-    return getFallbackData();
+    return getFallbackData(); // Return fallback data if retries fail
   }
 };
 
+// Transform the raw API response into the frontend's expected format
 const transformApiResponse = (data: RawApiResponse): ApiResponse => ({
-  input_data: {
-    engine_temperature: data.sensor_data.engine_temperature,
-    tire_pressure: data.sensor_data.tire_pressure,
-    battery_voltage: data.predictions.battery_health,
-    brake_pad: data.sensor_data.brake_pad_wear,
-    oil_quality: data.sensor_data.oil_pressure,
-  },
+  timestamp: data.timestamp,
+  input_data: data.input_data,
   predictions: {
-    RUL_battery: data.predictions.battery_rul,
-    RUL_brake_pad: data.predictions.brake_rul,
-    RUL_oil: data.predictions.oil_rul,
-    RUL_tire: data.predictions.tire_rul,
-  }
+    RUL_battery: data.predictions.RUL_battery,
+    RUL_brake_pad: data.predictions.RUL_brake_pad,
+    RUL_oil: data.predictions.RUL_oil,
+    RUL_tire: data.predictions.RUL_tire,
+  },
 });
 
+// Fallback data in case the API fails after retries
 const getFallbackData = (): ApiResponse => ({
+  timestamp: new Date().toISOString(),
   input_data: {
     engine_temperature: 82.45,
+    brake_pad_thickness: 10,
+    battery_voltage: 8,
     tire_pressure: 31.87,
-    battery_voltage: 88.32,
-    brake_pad: 75.23,
     oil_quality: 60,
+    cumulative_mileage: 200,
+    driving_behavior: 1,
+    environmental_condition: 1,
   },
   predictions: {
-    RUL_battery: '8 months',
-    RUL_brake_pad: '6 months',
+    RUL_battery: '120 days',
+    RUL_brake_pad: '200 days',
     RUL_oil: '500 km',
-    RUL_tire: '12 months',
-  }
+    RUL_tire: '120 days',
+  },
 });
