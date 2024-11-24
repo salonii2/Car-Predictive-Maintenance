@@ -56,11 +56,12 @@ Follow the steps below to install **Python 3.11**:
    ```bash
    pip install -r requirements.txt
 
-5. **Start the Flask API**:
+5. **Start the Flask API and wait for some time**:
    ```bash
    python volkswogen_api.py
 
-6. **If API Start Running on 'http://127.0.0.1:5000'** then open new Command Prompt Terminal and Naviagate into the project directory again:
+6. **When API Start Running on 'http://127.0.0.1:5000' and start showing 'Vehicle RUL Prediction API is live!'** then open new Command Prompt Terminal and 
+   Naviagate into the project directory again:
    ```bash
    cd car-predictive-maintenance
 
