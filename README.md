@@ -37,7 +37,20 @@ Follow the steps below to install **Python 3.11**:
 2. Download the Python 3.11 installer for Windows.
 3. Run the installer:
    - During installation, ensure you check the box labeled **"Add Python 3.11 to PATH"** before clicking **Install Now**.
+  
+## How to Check Python Version:
 
+To verify if Python 3.11 has been installed correctly on your system, follow these steps:
+
+1. Open Command Prompt (press Win + R, type cmd, and press Enter).
+2. In the Command Prompt window, type the following command and press Enter:
+   ```bash
+   python --version
+
+3. If Python 3.11 is installed correctly, the output should display the Python version, something like:
+   ```bash
+   Python 3.11.0
+   
 ---
 
 ### Installation Steps
@@ -60,7 +73,7 @@ Follow the steps below to install **Python 3.11**:
    ```bash
    python volkswogen_api.py
 
-6. **When API Start Running on 'http://127.0.0.1:5000' and start showing 'Vehicle RUL Prediction API is live!'** then open new Command Prompt Terminal and 
+6. **When API Start Running on 'http://127.0.0.1:5000' and start showing 'Vehicle RUL Prediction API is live!'** then Open new Command Prompt (press Win + R, type cmd, and press Enter) and 
    Naviagate into the project directory again:
    ```bash
    cd car-predictive-maintenance
