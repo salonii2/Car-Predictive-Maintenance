@@ -69,10 +69,12 @@ Follow the steps below to install **Python 3.11**:
    ```bash
    npm install
 
-5. **Run the development server**:
+8. **Run the development server**:
    ```bash
    npm run dev
 
-6. **Access the application**: Open your browser and navigate to:
+9. **Access the application**: Open your browser and navigate to:
    ```bash
    (http://localhost:5173)
+
+10. Keep Track of your Vehicle Health, Maintainence and Failure Predictions with our **AI-ML Powered Vehicle Predictive Maintainence System**
