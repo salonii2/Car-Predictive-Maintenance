@@ -10,7 +10,7 @@ export default function RULSection({ predictions }: RULSectionProps) {
     { label: 'Brake Pad', value: predictions.RUL_brake_pad },
     { label: 'Battery', value: predictions.RUL_battery },
     { label: 'Engine Oil', value: predictions.RUL_oil },
-    { label: 'Tire Pressure', value: predictions.RUL_tire },
+    { label: 'Tire', value: predictions.RUL_tire },
   ];
 
   return (
