@@ -10,7 +10,7 @@ interface CircularGaugeProps {
 export default function CircularGauge({ value, label, thresholds, icon }: CircularGaugeProps) {
   // Determine status based on thresholds
   const getStatus = (value: number) => {
-    if (value < thresholds.CRITICAL) return 'CRITICAL';
+    if (value <= thresholds.CRITICAL) return 'CRITICAL';
     if (value < thresholds.WARNING) return 'WARNING';
     return 'GOOD';
   };
