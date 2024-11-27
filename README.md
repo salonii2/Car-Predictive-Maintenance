@@ -88,7 +88,7 @@ To verify if Python 3.11 has been installed correctly on your system, follow the
 
 9. **Access the application**: Open your browser and navigate to:
    ```bash
-   (http://localhost:5173)
+   http://localhost:5173
 
 10. Keep Track of your Vehicle Health, Maintainence and Failure Predictions with our **AI-ML Powered Car Predictive Maintainence System**
     ```bash
