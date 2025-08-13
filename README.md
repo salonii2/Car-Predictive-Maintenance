@@ -30,7 +30,7 @@ If not installed, download from git-scm.com.
 ## 📌 Node.js
 Download from the official Node.js website.
 
-## 🐍 Installing Python 3.11
+# 🐍 Installing Python 3.11
 💻 Windows
 1. Download from Python 3.11 Downloads.
 2. Run the installer and check ✅ “Add Python 3.11 to PATH” before clicking Install Now.
@@ -39,38 +39,39 @@ Download from the official Node.js website.
 python --version
 You should see:
 Python 3.11.0
-## 🚀 Installation Steps
-# 1️⃣ Open Command Prompt
+
+# 🚀 Installation Steps
+## 1️⃣ Open Command Prompt
 (Press Win + R, type cmd, hit Enter)
 
-#2️⃣ Clone the repository
+## 2️⃣ Clone the repository
 git clone https://github.com/Salonii2/car-predictive-maintenance.git
 
-# 3️⃣ Navigate to the project directory
+## 3️⃣ Navigate to the project directory
 cd car-predictive-maintenance
 
-# 4️⃣ Install Python dependencies
+## 4️⃣ Install Python dependencies
 pip install -r requirements.txt
-# 5️⃣ Start the Flask API
+## 5️⃣ Start the Flask API
 
 python volkswogen_api.py
 ## ✅ Wait until you see:
 
 Vehicle RUL Prediction API is live!  
 Running on http://127.0.0.1:5000
-# 6️⃣ Open a NEW Command Prompt and navigate back to the project folder:
+## 6️⃣ Open a NEW Command Prompt and navigate back to the project folder:
 cd car-predictive-maintenance
 
-#7️⃣ Install project dependencies
+## 7️⃣ Install project dependencies
 npm install
 
-# 8️⃣ Run the development server
+## 8️⃣ Run the development server
 npm run dev
 
-# 9️⃣ Open the App in your browser:
+## 9️⃣ Open the App in your browser:
 🌐 http://localhost:5173
 
-## 🏎 Features
+# 🏎 Features
 🔮 Predictive Maintenance – AI/ML powered predictions of Remaining Useful Life (RUL) for your vehicle.
 
 🩺 Real-Time Health Monitoring – Keep track of performance and maintenance schedules.
